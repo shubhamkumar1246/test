@@ -1,0 +1,34 @@
+<link rel="stylesheet" href="/css/createForm.css" />
+<!-- create issue page having form taking title,description,label and author as input -->
+<div class="create-project">
+  <h1>Create Issue</h1>
+  <form action="/project/create-issue" method="POST">
+    <div class="inputbox">
+      <input type="text" name="title" placeholder="title" required />
+    </div>
+    <div class="inputbox">
+      <textarea
+        type=""
+        name="description"
+        placeholder="description"
+        cols="30"
+        required
+      ></textarea>
+    </div>
+    <div class="inputbox">
+      <input
+        type="text"
+        name="labels"
+        placeholder="Enter ,(comma) seperated multiple values"
+        required
+      />
+    </div>
+    <div class="inputbox">
+      <input type="text" name="author" placeholder="author" required />
+    </div>
+    <input type="hidden" name="project" value="<%= id %>" />
+    <div class="inputbox">
+      <button type="submit">Create Issue</button>
+    </div>
+  </form>
+</div>

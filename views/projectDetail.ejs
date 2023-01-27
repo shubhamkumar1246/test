@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="/css/projectDetail.css" />
+<!-- project detail page having create new issue button filter the issue on the basis of title description,author and lables, clear button to clear the filters and all the issues related to that project -->
+<div class="project-detail">
+  <h1>Issues Related to the project</h1>
+
+  <a href="/project/issue/<%=projectId._id%>">
+    <button class="btn">New Issue</button>
+  </a>
+  <div>
+    <form
+      id="filter-form"
+      action="/project/find/<%=projectId._id%>"
+      method="POST"
+    >
+      <div class="input-field">
+        <select name="option" id="option">
+          <option value="title" name="title">Filter by Title</option>
+          <option value="description" name="description">
+            Filter by description
+          </option>
+          <option value="author" name="author">Filter by author</option>
+          <option value="lable" name="label">Filter by Label</option>
+        </select>
+      </div>
+      <div class="input-field">
+        <input
+          type="text"
+          name="searchField"
+          placeholder="searchField"
+          required
+        />
+      </div>
+      <div class="button">
+        <button class="btn" id="find-btn" type="submit">FIND</button>
+      </div>
+    </form>
+    <a href="/project/<%=projectId._id%>">
+      <button class="btn" type="submit">Clear</button>
+    </a>
+  </div>
+  <ul id="issue-list">
+    <% for(let i of project_details){ %>
+    <div id="list">
+      <div id="title-author">
+        <div id="name">Title: <%= i.title %></div>
+        <div id="author">Author: <%= i.author %></div>
+      </div>
+      <div id="description">Description: <%= i.description %></div>
+    </div>
+    <% } %>
+  </ul>
+</div>

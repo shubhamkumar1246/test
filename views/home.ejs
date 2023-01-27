@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="/css/home.css" />
+<!-- home div having the create project button and rendering list of project from the database which we get from the controller -->
+<div class="home">
+  <h1>Never Miss The Track</h1>
+  <div id="create-project">
+    <div id="heading">Click Here to Start a New Project</div>
+    <span
+      ><a href="/project/form"
+        ><button id="create-project-btn">Create project</button></a
+      ></span
+    >
+  </div>
+  <div id="project">
+    <ul>
+      <% for(let i of project_list){ %>
+      <div id="list">
+        <a href="/project/<%=i.id%>" class="project-link">
+          <div id="name"><%= i.name %></div>
+          <div id="author"><%= i.author %></div>
+          <div id="description"><%= i.description %></div>
+        </a>
+      </div>
+      <% } %>
+    </ul>
+  </div>
+</div>

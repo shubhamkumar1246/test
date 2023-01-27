@@ -1,0 +1,69 @@
+.navbar {
+  height: 50px;
+  width: 100%;
+  background-color: rgb(174, 202, 15);
+  align-items: center;
+  align-self: center;
+  display: flex;
+  color: rgb(168, 179, 179);
+  margin-left: 19%;
+}
+.navbar a {
+  text-decoration: none;
+}
+.image {
+  margin-left: 15px;
+}
+.image img {
+  height: 60px;
+  width: 60px;
+}
+
+/* CSS */
+#home-btn {
+  appearance: none;
+  background-color: #ffffff;
+  border-radius: 40em;
+  border-style: none;
+  box-shadow: #adcfff 0 -12px 6px inset;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.24px;
+  margin: 0;
+  outline: none;
+  padding: 1rem 1.3rem;
+  quotes: auto;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-left: 40px;
+}
+
+#home-btn:hover {
+  background-color: #ffc229;
+  box-shadow: #ff6314 0 -6px 8px inset;
+  transform: scale(1.125);
+}
+
+#home-btn:active {
+  transform: scale(1.025);
+}
+
+@media (min-width: 768px) {
+  #home-btn {
+    font-size: 1rem;
+    padding: 0.75rem 2rem;
+  }
+}
+
+.heading {
+  margin-left: 150px;
+}

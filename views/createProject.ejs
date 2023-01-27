@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="/css/createForm.css" />
+<!-- create project page having form taking title,description and author as input -->
+<div class="create-project">
+  <h1>Create Project</h1>
+  <form action="/project/create/" method="POST">
+    <div class="inputbox">
+      <input type="text" name="name" placeholder="name" required />
+    </div>
+    <div class="inputbox">
+      <textarea
+        type=""
+        name="description"
+        placeholder="description"
+        cols="30"
+        required
+      ></textarea>
+    </div>
+    <div class="inputbox">
+      <input type="text" name="author" placeholder="author" required />
+    </div>
+    <div class="inputbox">
+      <button type="submit">Create Project</button>
+    </div>
+  </form>
+</div>
